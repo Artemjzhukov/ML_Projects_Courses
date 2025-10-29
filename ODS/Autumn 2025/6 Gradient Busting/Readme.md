@@ -1,5 +1,9 @@
 # Деревья решений → Градиентный бустинг → Продвинутая оптимизация CatBoost.
 
+## датасет [Employee dataset](https://www.kaggle.com/datasets/tawfikelmetwally/employee-dataset).
+
+## датасет [Predict Students' Dropout and Academic Success](https://archive.ics.uci.edu/dataset/697/predict+students+dropout+and+academic+success).
+
 ## Описание задачи и методов
 Исследование посвящено сравнительному анализу алгоритмов машинного обучения на основе деревьев решений для задач регрессии и классификации.  
 В проекте рассмотрены три основные группы методов: одиночные деревья решений, алгоритмы градиентного бустинга и методы оптимизации гиперпараметров.  
