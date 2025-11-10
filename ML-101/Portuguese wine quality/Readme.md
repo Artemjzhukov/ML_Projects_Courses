@@ -44,7 +44,7 @@ Predict which wines are 'Good/1' and 'Not Good/0' (binary classification; check 
 * ### Initialisation of target
 * ### Drop column 'quality'
 
-## [Part 3: Data Wrangling and Transformation](#Part-3:-Data-Wrangling-and-Transformation.)
+## [Part 3: Data Wrangling and Transformation](Wine%20quality%20-%20Classification.ipynb#part-3-data-wrangling-and-transformation)  
 * ### StandardScaler
 * ### Creating datasets for ML part
 * ### 'Train\Test' splitting method
