@@ -31,7 +31,7 @@ The dataset that's we see here contains 12 columns and 4898 entries of data abou
 Predict which wines are 'Good/1' and 'Not Good/0' (binary classification; check balance of classes; save predictions to .csv)
 
 
-## [Part 1: Import, Load Data](#Part-1:-Import,-Load-Data.)
+## [Part 1: Import, Load Data](./Wine%20quality%20-%20Classification.ipynb#Comclusion)
 * ### Import libraries, Read data from ‘.csv’ file
 
 ## [Part 2: Exploratory Data Analysis](#Part-2:-Exploratory-Data-Analysis.)
