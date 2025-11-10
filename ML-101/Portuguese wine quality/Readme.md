@@ -49,7 +49,7 @@ Predict which wines are 'Good/1' and 'Not Good/0' (binary classification; check 
 * ### Creating datasets for ML part
 * ### 'Train\Test' splitting method
 
-## [Part 4: Machine Learning](Wine%20quality%20-%20Classification.ipynb#Part-4:-Machine-Learning.)
+## [Part 4: Machine Learning](Wine%20quality%20-%20Classification.ipynb#Part-4-Machine-Learning)
 * ### Build, train and evaluate models without hyperparameters
     * #### Logistic Regression, K-Nearest Neighbors, Decision Trees 
     * #### Classification report
