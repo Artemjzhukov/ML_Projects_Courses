@@ -1,49 +1,34 @@
-# "Wine Quality."
+# Wine Quality.
 
-### _"Quality ratings of Portuguese white wines" (Classification task)._
+## Ranking of Portuguese White Wines by Quality.
 
-Logistic Regression & KNN & Decision Tree comparison
-with hyperparameters
-with over/under-sampling
+Toolset: Logistic Regression & KNN & Decision Tree comparison  
+with hyperparameters  
+with over/under-sampling  
 
 ## Table of Contents
 
-
-## Part 0: Introduction
-
-### Overview
+### Introduction: Data set Overview
 The dataset that's we see here contains 12 columns and 4898 entries of data about Portuguese white wines.
     
-**Метаданные:**
+**Properties:**
     
-* **fixed acidity** 
-
-* **volatile acidity**
-
-* **citric acid** 
-
-* **residual sugar** 
-
-* **chlorides** 
-
-* **free sulfur dioxide** 
-
-* **total sulfur dioxide**
-
-* **density** 
-
-* **pH** 
-
-* **sulphates** 
-
-* **alcohol** 
-
-* **quality** - score between 3 and 9
-
+* **fixed acidity**  
+* **volatile acidity**  
+* **citric acid**  
+* **residual sugar**  
+* **chlorides**  
+* **free sulfur dioxide**  
+* **total sulfur dioxide**  
+* **density**  
+* **pH**  
+* **sulphates**  
+* **alcohol**  
+* **quality** - score between 3 and 9  
 
 ### Questions:
     
-Predict which wines are 'Good/1' and 'Not Good/0' (use binary classification; check balance of classes; calculate perdictions; choose the best model)
+Predict which wines are 'Good/1' and 'Not Good/0' (binary classification; check balance of classes; save predictions to .csv)
 
 
 ## [Part 1: Import, Load Data](#Part-1:-Import,-Load-Data.)
