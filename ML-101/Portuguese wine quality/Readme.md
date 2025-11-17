@@ -5,8 +5,7 @@
 Toolset: Logistic Regression & KNN & Decision Tree comparison  
 with hyperparameters  
 with over/under-sampling  
-RF  
-Boosting  
+*after conclusion:* RandomForest, Boosting & Encemles
 
 ## Table of Contents
 
@@ -36,38 +35,17 @@ Predict which wines are 'Good/1' and 'Not Good/0' (binary classification; check 
 
 
 ## [Part 1: Import, Load Data](./Wine%20quality%20-%20Classification.ipynb#Comclusion)
-* ### Import libraries, Read data from ‘.csv’ file
 
 ## [Part 2: Exploratory Data Analysis](Wine%20quality%20-%20Classification.ipynb#Part-2-Exploratory-Data-Analysis)
-* ### Info, Head, Describe
-* ### Encoding 'quality' attribute
-* ### 'quality' attribute value counts and visualisation
-* ### Resampling of an imbalanced dataset
-* ### Random under-sampling of an imbalanced dataset
-* ### Random over-sampling of an imbalanced dataset
-* ### Initialisation of target
-* ### Drop column 'quality'
 
 ## [Part 3: Data Wrangling and Transformation](Wine%20quality%20-%20Classification.ipynb#part-3-data-wrangling-and-transformation)  
-* ### StandardScaler
-* ### Creating datasets for ML part
-* ### 'Train\Test' splitting method
 
 ## [Part 4: Machine Learning](Wine%20quality%20-%20Classification.ipynb#Part-4-Machine-Learning)
-* ### Build, train and evaluate models without hyperparameters
-    * #### Logistic Regression, K-Nearest Neighbors, Decision Trees 
-    * #### Classification report
-    * #### Confusion Matrix
-    * #### ROC-AUC score
-* ### Build, train and evaluate models with hyperparameters
-    * #### Logistic Regression, K-Nearest Neighbors, Decision Trees 
-    * #### Classification report
-    * #### Confusion Matrix
-    * #### ROC-AUC score
 
 ## [Conclusion](Wine%20quality%20-%20Classification.ipynb#conclusion)
 
-Сравнительные результаты моделей  
+# Сравнительные результаты моделей  (Сделать в одну таблицу!!)
+
 **Логистическая регрессия** показала accuracy 79.1% до оптимизации и 79.2% после, с незначительным изменением ROC-AUC с 0.687 до 0.690. Модель демонстрирует высокую точность для класса 0 (precision 0.816) при низком recall для класса 1 (0.245), что указывает на трудности с идентификацией позитивных случаев.
 
 **KNN** сохранил стабильные показатели до и после оптимизации: accuracy 83.8%, ROC-AUC 0.770. Модель показывает сбалансированные метрики для обоих классов с precision 0.874 для класса 0 и 0.667 для класса 1.
