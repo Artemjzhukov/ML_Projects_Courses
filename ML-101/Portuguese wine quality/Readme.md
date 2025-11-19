@@ -117,8 +117,5 @@ Gradient Boosting, Ансамбли - однако их результаты б�
 
 SHAP  
 SMOTE (Synthetic Minority Oversampling) для линейных моделей например в пайплайне
-LightGB
-XGB
-CatBoost
 
-Проверки? 
+Проверки? Мультиколениарность, гетероскедентичность, папарное влияние
