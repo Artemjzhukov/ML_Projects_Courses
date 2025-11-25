@@ -1,6 +1,6 @@
-# Wine Quality.
+# Classification Portuguese Wines 
 
-## Ranking of Portuguese White Wines by Quality.
+## Classification of the Quality of Portuguese White Wines 
 
 Toolset: Logistic Regression & KNN & Decision Tree comparison  
 with hyperparameters  
