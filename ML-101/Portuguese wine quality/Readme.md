@@ -5,7 +5,7 @@ juqw11Classification Portuguese Wines
 Toolset: Logistic Regression & KNN & Decision Tree comparison  
 with hyperparameters  
 with over/under-sampling  
-*after conclusion:* RandomForest, Boosting & Encemles
+*after middle conclusion:* RandomForest, Boosting & Ensemles
 
 ## Table of Contents
 
@@ -25,7 +25,7 @@ The dataset that's we see here contains 12 columns and 4898 entries of data abou
 * **pH**  
 * **sulphates**  
 * **alcohol**  
-* **quality** - score between 3 and 9  
+* **quality** 
 
 ### Questions:
     
@@ -42,7 +42,7 @@ Predict which wines are 'Good/1' and 'Not Good/0' (binary classification; check 
 
 [Conclusion](Wine%20quality%20-%20Classification.ipynb#conclusion)
 
-![Final Results/](/Final_results.png)
+![Final Results/](Final_results.png)
 
 **The final Ensemble** model proves to be the most robust solution, effectively leveraging the complementary strengths of Gradient Boosting and KNN. 
 It *achieves the highest* overall PR-AUC score (~0.833) and F1-score (~0.714), providing the best trade-off between identifying good wines (Recall) and minimizing false positives (Precision).  
