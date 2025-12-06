@@ -1,4 +1,4 @@
-# Classification Portuguese Wines 
+juqw11Classification Portuguese Wines 
 
 ## Classification of the Quality of Portuguese White Wines 
 
@@ -12,9 +12,7 @@ with over/under-sampling
 ### Introduction: Data set Overview
 The dataset that's we see here contains 12 columns and 4898 entries of data about Portuguese white wines.
 
-**Without null!**
-    
-**Properties:**
+ **Properties:**
     
 * **fixed acidity**  
 * **volatile acidity**  
@@ -44,78 +42,16 @@ Predict which wines are 'Good/1' and 'Not Good/0' (binary classification; check 
 
 [Conclusion](Wine%20quality%20-%20Classification.ipynb#conclusion)
 
-# Сравнительные результаты моделей  (Сделать в одну таблицу!!)
+![Final Results/](/Final_results.png)
 
-**Логистическая регрессия** показала accuracy 79.1% до оптимизации и 79.2% после, с незначительным изменением ROC-AUC с 0.687 до 0.690. Модель демонстрирует высокую точность для класса 0 (precision 0.816) при низком recall для класса 1 (0.245), что указывает на трудности с идентификацией позитивных случаев.
+**The final Ensemble** model proves to be the most robust solution, effectively leveraging the complementary strengths of Gradient Boosting and KNN. 
+It *achieves the highest* overall PR-AUC score (~0.833) and F1-score (~0.714), providing the best trade-off between identifying good wines (Recall) and minimizing false positives (Precision).  
+The confusion matrix confirms it correctly identifies a significant portion of the minority class while maintaining high accuracy on the majority class.    
+This demonstrates the power of ensemble methods in leveraging diverse model predictions to improve overall robustness and accuracy.  
+The final model is ready for deployment, with the Voting Classifier being the recommended choice due to its balanced and strong performance across key metrics for our imbalanced classification task.
 
-**KNN** сохранил стабильные показатели до и после оптимизации: accuracy 83.8%, ROC-AUC 0.770. Модель показывает сбалансированные метрики для обоих классов с precision 0.874 для класса 0 и 0.667 для класса 1.
+However, while the **Ensemble** offers peak performance, the **tuned KNN** model remains a compelling alternative due to its simplicity, lower training costs, and ease of deployment.
+In contrast, the **Ensemble model**, though more performant, requires maintaining multiple models, more memory, and longer inference times. 
 
-Дисбаланс метрик (**логистическая регрессия**):
-
-Класс 0: precision 81.6% (хорошо)  
-Класс 1: precision 56.4% (плохо)
-
-Сбалансированные метрики (**KNN**):
-
-Класс 0: precision 87.4% (хорошо)  
-Класс 1: precision 66.7% (нормально)
-
-*Сбалансированность* означает, что модель одинаково хорошо работает с обоими классами, а не жертвует одним ради другого.
-
-**Дерево решений** до оптимизации достигло accuracy 84.7% с ROC-AUC 0.779, но после настройки гиперпараметров показало снижение до accuracy 82.9% и ROC-AUC 0.755. Оптимизация привела к уменьшению precision для класса 1 с 0.662 до 0.645.
-Precision = "сколько из найденных объектов действительно правильные"
-Это значит: когда модель говорит "это класс 1", она теперь ошибается чаще - 35.5% случаев вместо 33.8%.
-
-Промежуточные выводы: 
-
-1. Основная проблема - все модели плохо справляются с классом 1, что видно по низкому recall (25-53%).
-
-2. Настройка гиперпараметров через GridCV не привела к значительному улучшению качества моделей. Логистическая регрессия получила минимальное улучшение, KNN сохранил прежние показатели, а дерево решений показало снижение производительности. 
-
-### ==>>  оптимизация не сработала  
-
-GridSearchCV подобрал параметры, но они не улучшили модели.  
-**Возможные причины:**
-
-1. Данные уже хорошо разделяются базовыми настройками  
-2. Параметры были подобраны не оптимально  
-3. Не хватает данных для существенного улучшения
-
-**Возможности для улучшения метрик:**  
-Для повышения качества классификации *можно рассмотреть ансамблевые методы*, такие как **случайный лес** или **градиентный бустинг**, которые часто показывают лучшие результаты на несбалансированных данных.   
-Дополнительная работа с признаками, включая отбор и создание новых переменных, может улучшить идентификацию класса 1. Стоит экспериментировать с техниками балансировки классов через class_weight или методы семплирования.
-
-# Результаты вторичной оптимизации:
-
-### Лучше всего Random Forest (с балансировкой классов):
-
-Сравнение RF (несбалансированная модель) → RF с балансировкой:  
-*Добавить сравнение всех моделей*
-
-Accuracy: 85.9% → 89.1% (+3.2%)  
-Recall класса 1: 48.6% → 68.1% (+19.5%!)  
-F1 класса 1: 60.3% → 73.3% (+13%)
-
-### Confusion Matrix сравнение:
-
-БЫЛО:                          СТАЛО:
-[[737  27]                    [[726  38]
- [111 105]]                    [ 69 147]]
- 
-False Negative: 111 → 69 (-42)  - значительно лучше!
-False Positive: 27 → 38 (+11)   - небольшой рост
-
-## Еще опробовано:
-Gradient Boosting, Ансамбли - однако их результаты были хуже (см. ноутбук)
-
-### Вывод:  
-Настройка параметром не сильно влияет на результаты. Они навмного сильней зависит от использованных моделей. Для несбалансированных классов нужны доработки данных.
-Лучший подход: Вернуться к простому Random Forest с балансировкой классов, который показал наилучшие результаты (так как хорошо работает с таим типом данных).  
-Разнообразные ансамбли провалились - добавление большего количества моделей без тщательного отбора и настройки весов привело к ухудшению качества.
-
-## Что можно было бы еще попробовать: 
-
-SHAP  
-SMOTE (Synthetic Minority Oversampling) для линейных моделей например в пайплайне
-
-Проверки? Мультиколениарность, гетероскедентичность, папарное влияние
+**The final choice** between these models should weigh the marginal performance gains of the Ensemble against  
+the increased complexity, training time, and economic costs associated with implementing and maintaining such a sophisticated system.
