@@ -1,4 +1,4 @@
-juqw11Classification Portuguese Wines 
+Classification Portuguese Wines 
 
 ## Classification of the Quality of Portuguese White Wines 
 
@@ -44,6 +44,9 @@ Predict which wines are 'Good/1' and 'Not Good/0' (binary classification; check 
 
 ![Final Results/](Final_results.png)
 
+![graph](https://raw.githubusercontent.com/<user>/<repo>/<branch>/<path>/image.png)
+
+#### The final  
 **The final Ensemble** model proves to be the most robust solution, effectively leveraging the complementary strengths of Gradient Boosting and KNN. 
 It *achieves the highest* overall PR-AUC score (~0.833) and F1-score (~0.714), providing the best trade-off between identifying good wines (Recall) and minimizing false positives (Precision).  
 The confusion matrix confirms it correctly identifies a significant portion of the minority class while maintaining high accuracy on the majority class.    
@@ -55,3 +58,16 @@ In contrast, the **Ensemble model**, though more performant, requires maintainin
 
 **The final choice** between these models should weigh the marginal performance gains of the Ensemble against  
 the increased complexity, training time, and economic costs associated with implementing and maintaining such a sophisticated system.
+
+------------------------------------------------
+
+#### Future steps:   
+deploy with **SHAP** for interpretability, monitor drift on new vintages, or incorporate external factors like _region_ for enhanced accuracy.  
+Compare feature importances – if alcohol, volatile-acidity, sulphates are on top we confirm wine-expert knowledge.  
+re-check calibration plot – business may prefer a well-calibrated prob-0.7 over a 0.9 that is wrong half the time.  
+Probability threshold 0.5 can be moved later to favour precision or recall depending on business cost.  
+GB usually beats RF on tabular data, but watch for over-fit; use **validation_fraction** early-stop
+
+------------------------------------------------
+
+#### If I find data about Georgian wines I could taste it by myself!)
